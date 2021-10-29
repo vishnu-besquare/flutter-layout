@@ -70,7 +70,10 @@ class _JsonPageState extends State<JsonPage> {
                           Text(showData[index]['last_seen_time']),
 
                           // Icon(Icons.account_circle)
-                          Text(showData[index]['messages'] ?? " ")
+                          CircleAvatar(
+                              child: Text(
+                                  showData[index]['messages']?.toString() ??
+                                      "0"))
                         ],
                       )
                     ],
